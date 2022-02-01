@@ -1,0 +1,493 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+
+body {
+    margin: 0;
+    background: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.navcontainer {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+header {
+    background: black;
+}
+
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.logo {
+    float: left;
+    padding: 10px 0;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 60px;
+    position: relative;
+   
+}
+
+nav a {
+    color:white;
+    text-decoration: none;
+    text-transform: lowercase;
+    font-size: 28px;
+}
+
+nav a:hover {
+    color: fuchsia;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: cornflowerblue;
+
+    position: absolute;
+    bottom: 0;
+    width: 0;
+
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.445), rgba(0,0,0,0.411)), url("../images/hero_girl.jpg") no-repeat center/cover;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    height: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+}
+
+.container .info h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.container .info h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.container .info p {
+    font-size: 2rem;
+    max-width: 100%;
+}
+
+.container .info a{
+    text-decoration: none;
+    display: inline-block;
+    background-color: cornflowerblue;
+    border-radius: 4px;
+    font-size: 2rem;
+    padding: 0.5rem, 2rem;
+    margin-top: 2rem;
+    color: white
+}
+
+.skillsCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 150px;
+
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 450px;
+    grid-template-rows: 200px 200px 80px;
+    grid-template-areas: "image" "text";
+
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    text-align: center;
+    margin: 20px;
+
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.card-image1 {
+    grid-area: image;
+    background: url(../images/skills_ppl.jpg);
+    border-radius: 5px;
+    background-size: cover;
+}
+
+.card-image2 {
+    grid-area: image;
+    background: url(../images/skills_tools.jpg);
+    border-radius: 5px;
+    background-size: cover;
+}
+
+.card-image3 {
+    grid-area: image;
+    background: url(../images/hero_hands.jpg);
+    border-radius: 5px;
+    background-size: cover;
+}
+.card-text {
+    grid-area: text;
+    margin: 25px;
+}
+
+.card-text p {
+    color:rgba(0,0,0,0.9);
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.card-text h2 {
+    margin-top: 0px;
+    font-size: 28px;
+}
+
+.card:hover {
+    transform: scale(1.2);
+    box-shadow:5px 5px 15px rgba(0,0,0,0.9);
+}
+
+.workCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 150px;
+}
+
+
+.workcard-image1 {
+    grid-area: image;
+    background: url(../images/kids_case.jpg);
+    border-radius: 5px;
+    background-size: cover;
+}
+
+.workcard-image1:hover {
+    background: url(../images/kids_caseColor.png);
+    border-radius: 5px;
+    background-size: cover;
+}
+
+
+.workcard-image2 {
+    grid-area: image;
+    background: url(../images/health_case.jpg);
+    border-radius: 5px;
+    background-size: cover;
+}
+
+.workcard-image2:hover {
+    background: url(../images/health_caseColor.png);
+    border-radius: 5px;
+    background-size: cover;
+}
+
+.workcard-image3 {
+    grid-area: image;
+    background: url(../images/travel_case.jpg);
+    border-radius: 5px;
+    background-size: cover;
+}
+
+.workcard-image3:hover {
+    background: url(../images/travel_caseColor.png);
+    border-radius: 5px;
+    background-size: cover;
+}
+
+.contact {
+    position: relative;
+    max-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    background: linear-gradient(rgba(28, 27, 43, 0.726), rgba(0,0,0,0.411)),url(../images/contact_map.jpg);
+    background-size: cover;
+
+}
+
+.contact .contact-content .color-overlay {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .8;
+}
+
+.contact .contact-content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .contact-content h2 {
+    font-size: 40px;
+    font-weight: 500;
+    color: white;
+    z-index: 1;
+}
+
+.contact-content p {
+    font-weight: 300;
+    color: white;
+    font-size: 22px;
+}
+
+.contact-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.contact-container .contactInfo {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-container .contactInfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.contact-container .contactInfo .box .icon {
+    min-width: 60px;
+    height: 60px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.contact-container .contactInfo .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 20px;
+    color: white;
+    flex-direction: column;
+    font-weight: 500;
+}
+
+.contact-container .contactInfo .box .text h3 {
+    font-weight: 500;
+    color: #00bcd4;
+
+}
+
+.contactForm {
+    width: 80%;
+    padding: 40px;
+    background: white;
+}
+
+.contactForm h2 {
+    font-size: 30px;
+    color:#333;
+    font-weight: 500;
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea  {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span
+ {
+    color: cornflowerblue;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"] {
+    width: 100px;
+    background: #00bcd4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    background: rgb(46, 46, 48);
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .socialIcon, 
+footer .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+footer .socialIcon li,
+footer .menu li {
+    list-style: none;
+
+}
+
+footer .socialIcon li a {
+    font-size: 2em;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .socialIcon li a:hover {
+    transform: translateY(-10px);
+    color: #00bcd4;
+}
+
+footer .menu li a {
+    font-size: 1.5em;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+footer .menu li a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: cornflowerblue;
+
+    position: absolute;
+    bottom: 0;
+    width: 0;
+
+    transition: all ease-in-out 250ms;
+}
+
+footer .menu li a:hover {
+    opacity: 1;
+    transform: translateY(-10px);
+    color: fuchsia;
+}
+
+footer .menu li a:hover::before {
+    width: 100%;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+@media only screen and (max-width: 720px) {
+    .skillsCard {
+        grid-column: span 12;
+        grid-template-columns: repeat(12,1fr);
+    }
+}
+ @media (max-width:991px) {
+     .contact {
+         padding: 50px;
+     }
+     .contact-container {
+        flex-direction: column;
+     }
+     .contact-container .contactInfo {
+         margin-bottom: 40px;
+     }
+     .contact-container .contactInfo,
+     .contactForm
+      {
+         width: 100%;
+     }
+ }
